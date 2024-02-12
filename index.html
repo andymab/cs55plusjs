@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Фильтр моделей</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <div class="filter-container">
-  <select name="model-filter" id="model-filter">
-  </select>
-    
-    <input type="text" id="mpn-filter" placeholder="Фильтр по MPN или названию модели">
-  </div>
-
-  <ul id="model-list">
-    <li>Модель 1 - MPN 12345</li>
-    <li>Модель 2 - MPN 67890</li>
-    <li>Модель 3 - MPN 54321</li>
-    <li>Модель 4 - MPN 09876</li>
-  </ul>
-
-  <script src="script.js"></script>
-  <script src="resource.js"></script>
-</body>
+  <head>
+    <title>Фильтр моделей</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="filter-container">
+        <select name="model-filter" id="model-filter"></select>
+        <input
+          type="text"
+          id="mpn-filter"
+          placeholder="Фильтр по Описанию (Description) или MPN"
+        />
+      </div>
+      <div class="main">
+        <ul id="model-list"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="resource.js"></script>
+  </body>
 </html>
