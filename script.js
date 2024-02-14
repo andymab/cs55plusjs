@@ -53,11 +53,21 @@ document.addEventListener("DOMContentLoaded", function () {
   modelFilterSelect.addEventListener("change", function () {
     var modelListItems = modelList.querySelectorAll("li");
     var selectedValue = modelFilterSelect.value;
+    console.log(selectedValue);
+    var mpnFilterInput = document.getElementById("mpn-filter").value;
+    console.log(mpnFilterInput);
+
 
     modelListItems.forEach(function (item) {
       var modelText = item.textContent;
-      if (selectedValue === "" || modelText.includes(selectedValue)) {
-        item.style.display = "block";
+      if (selectedValue == "" || modelText.includes(selectedValue)) {
+
+        if(mpnFilterInput ==="" || item.textContent.includes(mpnFilterInput) ){
+          item.style.display = "block";
+        }else {
+          item.style.display = "none";
+        }
+        
       } else {
         item.style.display = "none";
       }
